@@ -1,36 +1,59 @@
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Iterator;
 
 public class Example7 {
 
 	public static void main(String[] args) {
-           /* 응용문제7
-            사용자가 다음 질문에 확인하여 값을 입력 후 해당 결과를 출력하는 프로세서 제작합니다.
-            "첫번째 입력값(1 ~ 10까지) 입니다."
-            "두번째 입력값(1 ~ 10까지) 입니다." 
-            "세번째 입력값(1 ~ 10까지) 입니다."
-            마지막 질문입니다. 해당 세가지 값에 대한 산술기호를 적으시오. "+, -, *, /"
-            해당 산술기호에 맞게 산술식을 적용하여 최종값을 출력시키시오.
-            */
-		  Scanner a = new Scanner(System.in);
-		  System.out.println("첫번째 값을 입력해주세요."); 
-		  int b = a.nextInt();
-		  System.out.println("두번째 값을 입력해주세요."); 
-		  int c = a.nextInt();
-		  System.out.println("세번째 값을 입력해주세요."); 
-	      int d = a.nextInt();
-	      System.out.println("산술기호를 입력해주세요."); 
-          String e = a.next();
-          
-          if (e.equals("+")) {
-			System.out.println(b+c+d);
-		}		
-          else if (e.equals("-")) {
-        	  System.out.println(b-c-d);
-		}
-          else if (e.equals("*")) {
-        	  System.out.println(b*c*d);	
-          }
-          else {
-        	  System.out.println(b/c/d);
-		}		}                
+
+		/* 응용문제7
+	       다차원 배열로 생성 + 외부 class 및 메소드 사용
+	       [data]
+	       {"홍길동", "합격"}
+	       {"이순신", "합격"}
+	       {"강감찬", "불합격"}
+	       {"김유신", "합격"}
+	       {"유관순", "불합격"}
+	       {"장보고", "불합격"}
+	       	
+	       	  다차원 배열 형태이며 해당 값중 합격자만 출력되도록 합니다.
+	       	  단, 배열값을 외부 클래스 안에 메소드에서 처리가 되도록 합니다.
+	       	  
+	       	  결과 : 홍길동, 이순신, 김유신    */
+		
+		hi ex = new hi();
+		ex.name();
 	}
+}
+class hi{
+	
+	public void name() {
+		
+		String user[][] = {
+				   {"홍길동", "합격"},
+			       {"이순신", "합격"},
+			       {"강감찬", "불합격"},
+			       {"김유신", "합격"},
+			       {"유관순", "불합격"},
+			       {"장보고", "불합격"}
+                      		};
+		int user1 = user.length;
+		int user2 = user[0].length;
+		int a;
+		for(a=0;a<user1;a++) {
+		int b;
+			for(b=0;b<user2;b++) {
+				if (user[a][b].equals("합격")) {
+					
+					System.out.println(user[a][0]);
+				}
+			}
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+}

@@ -4,31 +4,36 @@ public class Example7 {
 
 	public static void main(String[] args) {
 
-		/* ÀÀ¿ë¹®Á¦.
+		/* ì‘ìš©ë¬¸ì œ.
 		   {"hong", "lee", "park", "kim", "kang", "jang", "ha", "sa"};
-		   abstractÀ» »ç¿ëÇÏ¿© setter, getter¸¦ ¹«Á¶°Ç Àû¿ëÇÕ´Ï´Ù.
-		   ¸ŞÀÎ¿¡¼­´Â ÇØ´ç µ¥ÀÌÅÍ¸¦ ¿ÜºÎ class·Î Àü´ŞÇÏ°í ÃÖÁ¾ Á¤º¸°ª¸¸ ¹è¿­·Î 
-		   »ı¼ºÇÏ¿© Ãâ·Â µÇµµ·Ï ÇÕ´Ï´Ù. 
-		   ´Ü, sette¤¡¿¡¼­ ¹è¿­ µ¥ÀÌÅÍÁß 4ÀÚ¸® ¹Ì¸¸¿¡ ÀÖ´Â ¹è¿­¸¸ »õ·Î »ı¼ºÇÏ¿© 
-		   getter·Î °ªÀ» ¹Ş¾Æ ¸ŞÀÎ¿¡¼­ ¹è¿­·Î Ãâ·ÂÇÏ¼¼¿ä. */
+		   abstractì„ ì‚¬ìš©í•˜ì—¬ setter, getterë¥¼ ë¬´ì¡°ê±´ ì ìš©í•©ë‹ˆë‹¤.
+		   ë©”ì¸ì—ì„œëŠ” í•´ë‹¹ ë°ì´í„°ë¥¼ ì™¸ë¶€ classë¡œ ì „ë‹¬í•˜ê³  ìµœì¢… ì •ë³´ê°’ë§Œ ë°°ì—´ë¡œ 
+		   ìƒì„±í•˜ì—¬ ì¶œë ¥ ë˜ë„ë¡ í•©ë‹ˆë‹¤. 
+		   ë‹¨, setteã„±ì—ì„œ ë°°ì—´ ë°ì´í„°ì¤‘ 4ìë¦¬ ë¯¸ë§Œì— ìˆëŠ” ë°°ì—´ë§Œ ìƒˆë¡œ ìƒì„±í•˜ì—¬ 
+		   getterë¡œ ê°’ì„ ë°›ì•„ ë©”ì¸ì—ì„œ ë°°ì—´ë¡œ ì¶œë ¥í•˜ì„¸ìš”. */
 		
 		String names[] =  {"hong", "lee", "park", "kim", "kang", "jang", "ha", "sa"};
 	
 		
 		name n = new name();
-		n.name1();
+		n.name1(names);
 		
 	}
 }
 abstract class nm{
-	abstract public void name1();
+	abstract public void name1(String[] nms);
 	abstract public String name2(); 
 }
 
 class name extends nm{
+	int i;
 	@Override
-	public void name1() {
-		
+	public void name1(String[] nms) {
+		int w=0;
+		for(int i=0;i<nms.length;i++) {
+			int ea = nms[i].length();
+			System.out.println(nms[i]);
+		}
 	}
 @Override
 	public String name2() {

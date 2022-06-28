@@ -5,15 +5,14 @@ public class ssss {
 
 	public static void main(String[] args) {
 
-		/* ¼÷Á¦. ArrayList¸¦ ÀÌ¿ëÇÏ¿© °á°ú°ªÀ» Ãâ·Â µÇµµ·Ï ÇÕ´Ï´Ù.
-		   ¿ø½Ãµ¥ÀÌÅÍ => {"red", "green", "blue", "pink", "orange", "black", "white", "hotpink", "gray"}
-		   ÇØ´ç µ¥ÀÌÅÍ »ö»ó °ªÁß 6ÀÚ ¹Ì¸¸ÀÇ »ö»óÀº ¸ğµÎ »èÁ¦ ÈÄ °á°ú ¹è¿­ °ªÀ¸·Î »ı¼ºÇÏ½Ã¿À. 
+		/* ìˆ™ì œ. ArrayListë¥¼ ì´ìš©í•˜ì—¬ ê²°ê³¼ê°’ì„ ì¶œë ¥ ë˜ë„ë¡ í•©ë‹ˆë‹¤.
+		   ì›ì‹œë°ì´í„° => {"red", "green", "blue", "pink", "orange", "black", "white", "hotpink", "gray"}
+		   í•´ë‹¹ ë°ì´í„° ìƒ‰ìƒ ê°’ì¤‘ 6ì ë¯¸ë§Œì˜ ìƒ‰ìƒì€ ëª¨ë‘ ì‚­ì œ í›„ ê²°ê³¼ ë°°ì—´ ê°’ìœ¼ë¡œ ìƒì„±í•˜ì‹œì˜¤. 
 		   [orange, hotpink]	*/
 
 		String colors[] = {"red", "green", "blue", "pink", "orange", "black", "white", "hotpink", "gray"};
 		ArrayList<String> arc = new ArrayList<>();
 		int ea = colors.length;
-		int ee = colors[0].length();
 		int a;
 		for(a=0;a<ea;a++) {
 			if (colors[a].length()>5) {

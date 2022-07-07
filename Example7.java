@@ -1,43 +1,38 @@
-package Ex;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Example7 {
 
 	public static void main(String[] args) {
-
-		/* ì‘ìš©ë¬¸ì œ.
-		   {"hong", "lee", "park", "kim", "kang", "jang", "ha", "sa"};
-		   abstractì„ ì‚¬ìš©í•˜ì—¬ setter, getterë¥¼ ë¬´ì¡°ê±´ ì ìš©í•©ë‹ˆë‹¤.
-		   ë©”ì¸ì—ì„œëŠ” í•´ë‹¹ ë°ì´í„°ë¥¼ ì™¸ë¶€ classë¡œ ì „ë‹¬í•˜ê³  ìµœì¢… ì •ë³´ê°’ë§Œ ë°°ì—´ë¡œ 
-		   ìƒì„±í•˜ì—¬ ì¶œë ¥ ë˜ë„ë¡ í•©ë‹ˆë‹¤. 
-		   ë‹¨, setteã„±ì—ì„œ ë°°ì—´ ë°ì´í„°ì¤‘ 4ìë¦¬ ë¯¸ë§Œì— ìˆëŠ” ë°°ì—´ë§Œ ìƒˆë¡œ ìƒì„±í•˜ì—¬ 
-		   getterë¡œ ê°’ì„ ë°›ì•„ ë©”ì¸ì—ì„œ ë°°ì—´ë¡œ ì¶œë ¥í•˜ì„¸ìš”. */
-		
-		String names[] =  {"hong", "lee", "park", "kim", "kang", "jang", "ha", "sa"};
+		/*
+		 * [TEST1]
+	  	   ÄÄÇ»ÅÍ°¡ 1~9±îÁö ¼ıÀÚ¸¦ ÃÑ 5¹ø ¹İº¹ ÇÕ´Ï´Ù.
+		   5¹ø ¹İº¹ÇÏ´Â µ¿¾È ¹è¿­¿¡ ÇØ´ç °ªÀÌ ÀúÀå µÇ¾î¾ß ÇÕ´Ï´Ù.
+		   ´Ü, Áßº¹µÈ °ªÀº Àı´ë ¹è¿­¿¡ ÀÔ·Â µÇÁö ¾Êµµ·Ï ÇÕ´Ï´Ù.
+		   ¡Ø ÈùÆ® ¹è¿­Àº ArrayList¸¦ »ç¿ëÇÏ¸ç, ¹è¿­¿¡ Áßº¹°ª ¿©ºÎ´Â º°µµÀÇ return ¸Ş¼Òµå¸¦ 
+		   È°¿ëÇÏ¿© Ã¼Å© µÇµµ·Ï ÇÕ´Ï´Ù.   Á¤´ä ¿¹½Ã [2,3,7,9,4] */
 	
-		
-		name n = new name();
-		n.name1(names);
+		random r = new random();
+		r.ran();
 		
 	}
 }
-abstract class nm{
-	abstract public void name1(String[] nms);
-	abstract public String name2(); 
-}
-
-class name extends nm{
-	int i;
-	@Override
-	public void name1(String[] nms) {
-		int w=0;
-		for(int i=0;i<nms.length;i++) {
-			int ea = nms[i].length();
-			System.out.println(nms[i]);
+class random{
+	ArrayList<Integer> ar = new ArrayList<>();
+	public void ran() {
+		Random rr = new Random();
+		int b;
+		for(int i=1;i<6;i++) {
+			b = rr.nextInt(9)+1;
+			this.ar.add(b);
 		}
+		System.out.println(this.ar);
 	}
-@Override
-	public String name2() {
-		return null;
-	}	
+	
+	
+//	public int dom() {
+//		return this.ar;
+//	}
 	
 }

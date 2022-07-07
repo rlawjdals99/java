@@ -5,37 +5,36 @@ import java.util.Scanner;
 public class Example4 {
 
 	public static void main(String[] args) {
-	    /*[¹®Á¦2] °Ë»öÇÒ »ç¿ëÀÚ ÀÌ¸§À» °Ë»öÇÏ°Ô µË´Ï´Ù. (¸ÞÀÎ ¸Þ¼Òµå¿¡¼­ ½ÇÇà)		  
-		  »ç¿ëÀÚ ¸®½ºÆ®´Â ´ÙÀ½°ú °°½À´Ï´Ù.
-		  (¿ÜºÎ Å¬·¡½º ¹× ¿ÜºÎ ¸Þ¼Òµå¿¡¼­ Á¦ÀÛ) °­º¸°æ, ±Ç¿ëÈ¯, ±Ý»õ·Ï, ±èµ¿ÁÖ, ±è¹ÎÀç, ¼ºÀ¯¸®, ¼ÕÁøÈ£, ¾ÈÈñ¼º		  
-		  ÇØ´ç ¸®½ºÆ® Á¤º¸´Â º°µµÀÇ ¸Þ¼Òµå ¿¡¼­ »ý¼ºÇØ¾ß ÇÕ´Ï´Ù. »ç¿ëÀÚ°¡ ÀÔ·ÂµÈ ÀÌ¸§ÀÌ ÀÖÀ» °æ¿ì "ÇØ´ç »ç¿ëÀÚ°¡ ÀÖ½À´Ï´Ù." ¶ó°í Ãâ·ÂÇÏ°í ¾øÀ»
-		  °æ¿ì "ÇØ´ç »ç¿ëÀÚ´Â °¡ÀÔ µÇÁö ¾Ê¾Ò½À´Ï´Ù." ¶ó°í Ãâ·ÂÇÕ´Ï´Ù.		  
-		  ÈùÆ® : ¸ÞÀÎ¸Þ¼Òµå¿¡¼­ Scanner ÀÛµ¿ ÇÏ¸ç, µ¥ÀÌÅÍ °Ë»öÀº ¿ÜºÎ Class ¹× ¿ÜºÎ ¸Þ¼Òµå¿¡¼­ Ã³¸® */
+	    /*[ë¬¸ì œ2] ê²€ìƒ‰í•  ì‚¬ìš©ìž ì´ë¦„ì„ ê²€ìƒ‰í•˜ê²Œ ë©ë‹ˆë‹¤. (ë©”ì¸ ë©”ì†Œë“œì—ì„œ ì‹¤í–‰)		  
+		  ì‚¬ìš©ìž ë¦¬ìŠ¤íŠ¸ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.
+		  (ì™¸ë¶€ í´ëž˜ìŠ¤ ë° ì™¸ë¶€ ë©”ì†Œë“œì—ì„œ ì œìž‘) ê°•ë³´ê²½, ê¶Œìš©í™˜, ê¸ˆìƒˆë¡, ê¹€ë™ì£¼, ê¹€ë¯¼ìž¬, ì„±ìœ ë¦¬, ì†ì§„í˜¸, ì•ˆí¬ì„±		  
+		  í•´ë‹¹ ë¦¬ìŠ¤íŠ¸ ì •ë³´ëŠ” ë³„ë„ì˜ ë©”ì†Œë“œ ì—ì„œ ìƒì„±í•´ì•¼ í•©ë‹ˆë‹¤. ì‚¬ìš©ìžê°€ ìž…ë ¥ëœ ì´ë¦„ì´ ìžˆì„ ê²½ìš° "í•´ë‹¹ ì‚¬ìš©ìžê°€ ìžˆìŠµë‹ˆë‹¤." ë¼ê³  ì¶œë ¥í•˜ê³  ì—†ì„
+		  ê²½ìš° "í•´ë‹¹ ì‚¬ìš©ìžëŠ” ê°€ìž… ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤." ë¼ê³  ì¶œë ¥í•©ë‹ˆë‹¤.		  
+		  ížŒíŠ¸ : ë©”ì¸ë©”ì†Œë“œì—ì„œ Scanner ìž‘ë™ í•˜ë©°, ë°ì´í„° ê²€ìƒ‰ì€ ì™¸ë¶€ Class ë° ì™¸ë¶€ ë©”ì†Œë“œì—ì„œ ì²˜ë¦¬ */
 	
 			Scanner sc = new Scanner(System.in);
-			System.out.println("°Ë»öÇÒ »ç¿ëÀÚ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
-			String aws = sc.next();
-			
-			user u = new user();
-			u.array(aws);
-			
+			System.out.println("ê²€ìƒ‰í•  ì‚¬ìš©ìž ì´ë¦„ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”.");
+			String user = sc.next();
+
+			member m = new member();
+			m.list(user);
 	}
 }
-class user{
+class member{
 	
-	public void array(String scan) {
-	String member = "°­º¸°æ, ±Ç¿ëÈ¯, ±Ý»õ·Ï, ±èµ¿ÁÖ, ±è¹ÎÀç, ¼ºÀ¯¸®, ¼ÕÁøÈ£, ¾ÈÈñ¼º";
-	ArrayList<String> mb = new ArrayList<String>(Arrays.asList(member));
-	int ea = mb.size();
-	for(int i=0;i<ea;i++) {
-		if (mb.get(i) == (scan)) {
-			System.out.println("ÇØ´ç »ç¿ëÀÚ°¡ ÀÖ½À´Ï´Ù.");
+	public void list(String u) {
+		String members[] = {"ê°•ë³´ê²½", "ê¶Œìš©í™˜", "ê¸ˆìƒˆë¡", "ê¹€ë™ì£¼", "ê¹€ë¯¼ìž¬", "ì„±ìœ ë¦¬", "ì†ì§„í˜¸", "ì•ˆí¬ì„±"}; 
+		int ea = members.length;
+		int i;
+		for(i=0;i<ea;i++) {
+			if (u.equals(members[i])) {
+				System.out.println("í•´ë‹¹ ì‚¬ìš©ìžê°€ ìžˆìŠµë‹ˆë‹¤.");
+			}
+			}
 		}
-		else {
-			System.out.println("ÇØ´ç »ç¿ëÀÚ´Â °¡ÀÔ µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
-		}
-	}
+		
+		
+		
 	
 	
-	}
 }

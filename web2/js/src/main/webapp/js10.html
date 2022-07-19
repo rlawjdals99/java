@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="ie-edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<script>
+var friut=["사과","딸기","바나나","키위","파인애플","수박","참외"];
+</script>
+
+<style>
+.bt{width:100px; height:30px;
+background-color: black; color:white; text-align: center;}
+</style>
+</head>
+
+<body>
+<form id="frm" name="frm" method="get" action="http://192.168.100.77:8080/js/js10.html">
+<p>장바구니 시스템 [사용자가 구매할 과일을 선택]</p>
+</form>
+<br>
+
+<input type="button" value="신청완료" class="bt" onclick="abc();">
+</body>
+
+<script>
+
+	var w = 0;
+	while (w<friut.length) {	
+	var aaa = "<input type='checkbox' name='go' value='"+w+"'>"+friut[w];
+	document.getElementById("frm").innerHTML += aaa;
+	w++;
+	}
+
+	function abc() {
+		var ea= friut.length;
+		var i=0;
+		var count=0;
+		while (i<ea) {
+			console.log(frm.go[i].checked);
+			if (frm.go[i].checked==true) {
+				count++;
+			}
+			i++;
+		}
+		
+		
+		if (count < 2) {
+			alert("구매하실 과일 2가지 이상을 선택 하세요");
+		}
+
+		else{
+		frm.submit();
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+</script>
+
+</html>

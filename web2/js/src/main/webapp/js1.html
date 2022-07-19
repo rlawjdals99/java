@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>javascript 4일차 submit + return</title>
+<script>
+function abc() {	//return 함수
+	if(frm.search.value==""){
+		alert("검색할 단어를 입력하세요.");
+		return false;	//submit 속성에만 return을 무조건 사용
+	}
+	else {
+		frm.submit();
+	}
+}
+
+</script>
+</head>
+<body>
+<!-- onsubmit : 무조건 form 태그에만 사용 -->
+<form name="frm" id="frm" method="post" action="http://nate.com" onsubmit="abc();">
+<input type="text" id="search" name="search">
+<input type="submit" value="검색">
+</form>
+
+
+
+
+</body>
+</html>

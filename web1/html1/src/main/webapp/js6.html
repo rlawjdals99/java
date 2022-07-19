@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>javascript 2일차 함수 + return함수 응용</title>
+<script src="http://192.168.100.213:8080/js/js6.js"></script>
+<script>
+function return1(k) {	//해당 함수값을 받는 역할(상대방이 보낸 통신값)
+	
+	var msg;
+	if (k%2==0) {
+		msg = "짝수";
+	}
+	else {
+		msg = "홀수";
+	}
+	return msg;	//결과를 상대방 서버에 재호출	
+	
+	
+}
+call1();	//상대방 서버에 있는 함수 호출
+
+
+
+
+
+
+
+
+/* 응용문제. 해당 함수들을 이용하여 결과값을 return 받는 코드를 작성 
+   숫자 20,30 을 함수로 전달
+   결과값 출력 : 600	*/
+function setter(a,b) {
+	  var cc = getter(a,b);
+// 	console.log(cc);	
+}
+
+function getter(aa,bb) {
+	var c = aa*bb;
+	return c;
+}
+
+setter(20,30);
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

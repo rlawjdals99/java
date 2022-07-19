@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>javascript 2일차 함수(function)</title>
+<script>
+function a() {
+	console.log("홍길동");	//일반함수
+}
+a();	//함수 실행. 단, function보다 아래에 있어야 함
+
+function b(num) {	//num : 인수값
+	console.log(num);
+}
+var z = 10;
+b(z);	//b함수에 숫자 인수값을 적용하여 호출
+
+function z1() {
+	console.log("z함수");
+	zz();	//외부 zz라는 함수로 호출함
+}
+
+function zz() {
+	console.log("화녕합니다.");
+}
+z1();
+
+// setter, getter(java) => call, return
+function setter(n) {
+	var result = getter(n);	//result변수로 return된 값을 받음	
+	console.log(result)	//결과 출력
+}
+
+function getter(nn) {	//setter함수에서 전달 받음
+	var cal = nn + 20;	//전달 받은 값과 추가 값을 계산
+	return cal;	//최종 결과 값을 return
+}
+
+setter(5);	//함수 호출
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

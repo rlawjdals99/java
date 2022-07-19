@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>javascript 2일차 외부 api js 연결 + 배열(응용편)</title>
+<script src="http://192.168.100.211:8080/html1/js8.js"></script>
+<script src="http://192.168.100.213:8080/js/js8.js"></script>
+<script>
+/*
+   data_a ["hong","park","kim","jang"] 
+   data_b [2500,3400,1000,6200]
+   data_c ["S","V","N","N"]
+   
+   data_a를 가지고 있는 사람이 최종출력.
+   결과출력: kim님 적립금은 1000원 이며, 일반회원 입니다.
+   
+   
+   date_b에서 출발시 var user_id; 변수 선언. user_id = "jang"
+   1. A가 user_id="jang" => B 에게 전송
+   2. B가 해당 값이 있는지 파악
+   없을 경우 "해당 사용자는 가입되지 않았습니다."
+   있을 경우 B => index값을 보내 줘야함
+   해당 index를 받은 A는 해당 적립금 금액을 return 해줌
+   3. B가 해당 값을 받음
+   4. 2번에서 B에게 받는 index값을 C에게 보냄
+   	  C가 index값을 받아서 해당 배열에 회원 레벨을 return함
+   	  A는 C에게 받은 레벨값을 B에게 return 함
+   5. 최종 B의 아이디, 적립금, 레벨 return값을 결과값처럼 출력
+function aaa() {
+	var result = bbb();
+	console.log(result[0]);
+}
+   function bbb() {
+	var a= 1;
+	var b= 2;
+	return [a,b];	//return값 1개 이상 전달할 경우 사용
+}
+aaa();
+*/
+var data_b= [2500,3400,1000,6200];
+var user_id="hong";
+function abc(){
+	var index = find_name(user_id);		//
+	if (index < data_b.length ) {
+	var cash = data_b[index];		 
+	var gr = grade(index);
+	var msg;
+	switch (gr){
+	
+	case "S":
+		msg="실버회원";
+		break;
+	
+	case "V":
+		msg = "VIP회원";
+		break;
+		
+	case "N":
+		msg = "일반회원";
+		break;
+		
+	}	
+	
+	console.log(user_id + " 님의 적립금은 " + cash +" 이며 등급은 " + msg + "입니다.");
+	}
+}
+abc();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script>
+
+Function
+
+
+
+
+//id.readOmlt=true;		//readOnly (읽기전용)
+
+
+
+
+var id = document.getElmentById("mid");
+var pw = document.getElmentById("mpass");
+
+if (id.value=="") {	//해당 id값이 비어있을 경우
+	alert("아이디를 입력하세요");	//alert (공고문구)
+	id.focus();	//focus() 커서를 해당 오브젝트에 적용할 때 사용
+}
+else if (pw.value=="") {
+		alert("패스워드를 입력하세요");
+		pw.focus();
+	
+}
+
+else{
+// 		form id 사용시
+// 		var f = document.getElmentById("frm");
+// 		f.submit();	
+		
+// 		form name사용시		
+		frm.submit();	//submit() : method-action 발동시키는 함수
+}
+
+
+</script>
+</head>
+<body>
+<form id="frm" name="frm" method="post" action="http://naver.com">
+<input type="text" id=mid name="mid">
+<input type="password" id="mpass" name="mpass">
+<input type="button" value="확인" onclick="abc();">
+</form>
+
+<!-- onclick속성 (button) 
+onclick 사용안하는 속성 (submit, reset) -->
+
+
+
+
+
+
+
+</body>
+</html>

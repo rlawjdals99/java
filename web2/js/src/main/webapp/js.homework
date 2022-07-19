@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<script>
+	var menu = ["푸드페어","메가뷰티쇼","종근당건강","필립스","글로벌 쇼핑데이","특가 대방출"];
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div id="bt"></div>
+</form>
+
+
+</body>
+
+<script>
+
+	var w = 0;
+	while (w<menu.length) {
+	var a = "<input type='submit' name='go' onclick='aaa'>"+menu[w];
+	document.getElementById("bt").innerHTML += a;
+		w++;
+	}
+	function aaa() {
+		var i = 0;
+		var ea = menu.length;
+			location.href ='./https://www.coupang.com/np/campaigns/16160?from=home_C1&traid=home_C1&trcid=11169775';
+		while (i<ea) {
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+</script>
+</html>

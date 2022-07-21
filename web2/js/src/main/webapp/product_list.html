@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>javascript 7일차</title>
+<script src="http://192.168.100.77:8080/js/product_list.js?v=2"></script>
+<script>
+function allcheck2() {
+	if (f.allcheck.checked = true) {
+	var w = 0;
+	while(w<ea){
+		f.pd[w].checked = true;
+		w++;
+	}
+	}
+	else{
+		var w=0;
+		while(w<ea){
+			f.pd[w].checked = false;
+			w++;
+		}
+	}
+}
+	function method2() {
+		if (value =="") {
+			alert("test");
+		f.submit();
+		}
+		//하나라도 체크가 되어야만 전송이 됨.
+	}	
+	
+	
+</script>
+</head>
+<body>
+<form name="f" id="f" method="get" action="./product.html">
+<table border="1" cellpadding="0" cellspacting="0">
+<thead>
+<tr>
+<th><input type="checkbox" id="allcheck" onclick="allcheck2();"></th>
+<td>상품명</td>
+<td>가격</td>
+</tr>
+</thead>
+<tbody id="list">
+<!-- <tr> -->
+<!-- <td><input type="checkbox" name="a"></td> -->
+<!-- <td>상품명</td> -->
+<!-- <td>가격</td> -->
+<!-- </tr> -->
+</tbody>
+
+</table>
+<input type="button" value="구매하기" onclick="method2();">
+</form>
+</body>
+<script>
+var html = document.getElementById("list");
+var ea = product["pd_name"].length;
+var tr,td,input;
+// console.log(product["pd_name"][2][1]);
+Object.keys(product["pd_name"]).forEach(function(aa,bb,cc) {
+		tr= document.createElement("tr");
+	
+	var f;
+	for(f in product["pd_name"][aa]){
+		td= document.createElement("td");
+		var code;
+// 		console.log(f);
+		switch (f) {
+		case "0":	//상품명
+			code = 2;
+			input= document.createElement("input");
+			input.type = "checkbox";
+			input.name = "pd";
+			input.value = product["pd_name"][aa][code];
+			td.append(input);
+			break;
+			
+		case "1":	//가격
+			code = 0;
+			td.append(product["pd_name"][aa][code]);			
+			break;
+			
+		case "2":	//고유값
+			code = 1;
+		td.append(Number(product["pd_name"][aa][code]).toLocaleString());	
+			break;
+		}
+		tr.append(td);
+		html.append(tr);
+// 		console.log(product["pd_name"][aa][code]);
+		
+		
+	}
+});
+
+
+
+</script>
+</html>

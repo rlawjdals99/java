@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<script src="./js/jquery.js"></script>
+<title>리뷰작성</title>
+<script>
+function clear2() {
+	if(f.usernm.value == ""){
+		alert("고객명을 입력하세요.");
+	}
+	else if (f.product.value == "") {
+		alert("상품명을 입력하세요.");
+	}
+	else if(f.text.value == ""){
+		alert("내용을 입력하세요.");
+	}
+// 	else{
+// 		if (confirm("리뷰를 작성하시겠습니까?")) {
+// 			f.submit();
+// 		};
+// 	}
+}
+
+
+
+</script>
+</head>
+<body>
+<form name="f" id="f">
+고객명 <input type="text" name="usernm" id="usernm"><br>
+상품명 <input type="text" name="product" id="product"><br>
+평점 <input type="radio" name="rd">5점
+<input type="radio" name="rd">4점
+<input type="radio" name="rd">3점
+<input type="radio" name="rd">2점
+<input type="radio" name="rd">1점<br>
+내용 <textarea rows="10" cols="35" id="text">
+</textarea><br>
+<input type="button" value="작성완료" onclick="clear2()">
+<input type="button" value="작성취소" >
+</form>
+</body>
+</html>

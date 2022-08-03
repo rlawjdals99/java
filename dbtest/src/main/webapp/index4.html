@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>포인트 업데이트 사용법</title>
+<script>
+	function abc(i) {
+		var ids = document.getElementById("data"+i);
+		if (ids.value== "") {
+			alert("포인트 값을 입력 해주세요");
+		}
+		else {
+			if (isNaN(ids.value) == true) {	
+				//isNaN : not a number
+				//isNaN : false(숫자만 적용되었을 경우), true(문자가 있음) 
+				alert("숫자만 입력하세요");
+			}	
+			else{
+				f.submit();
+			}
+		}
+	}
+
+</script>
+</head>
+<body>
+<form name="f" id="f" method="post" action="index4.do">
+<p>포인트 변경</p>
+<table>
+<tr>
+<td>데이터1[홍길동]</td>
+<td>
+<input type="hidden" name="midx1" id="midx1" value="2">
+<input type="text" name="data1" id="data1">
+</td>
+<td><input type="button" value="수정" onclick="abc(1)"></td>
+</tr>
+
+<tr>
+<td>데이터2[유관순]</td>
+<td>
+<input type="hidden" name="midx2" id="midx2" value="3">
+<input type="text" name="data2" id="data2">
+</td>
+<td><input type="button" value="수정" onclick="abc(2)"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

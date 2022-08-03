@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="ie=edge, chrome=1">
+<title>데이터 삭제 delete</title>
+<script>
+	function abc(i) {
+		var z = document.getElementById("idx");
+		z.value = i;
+		if (confirm("해당 데이터는 삭제시 복구가 불가능합니다.\n삭제하시겠습니까?")) {
+			f.submit();
+		}		
+		
+	}
+
+</script>
+</head>
+<body>
+<form name="f" id="f" method="post" action="index5.do">
+<input type="hidden" name="idx" id="idx" value="">
+<p>사용자 삭제</p>
+<table>
+<tr>
+<td>데이터1[홍길동]</td>
+<td><input type="button" value="삭제" onclick="abc(2)"></td>
+</tr>
+
+<tr>
+<td>데이터2[유관순]</td>
+<td><input type="button" value="삭제" onclick="abc(3)"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
